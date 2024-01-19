@@ -1,6 +1,7 @@
 :root {
   --black: #141414;
   --white: #fefefe;
+  --transparent: #ffffffe8;
   --purple: #e63cdd59;
   --blue: #3545f7;
   --green: #73f665;
@@ -297,6 +298,10 @@ body {
   .header {
     .header__menu-icon {
       display: block;
+      &.header__menu-icon--toggle {
+        box-shadow: 0px 0px 10px 2px var(--black);
+        border-radius: 20px;
+      }
     }
   }
 
@@ -308,10 +313,33 @@ body {
     height: 100dvh;
     background-color: var(--white);
     z-index: 2;
-    transition: all 300ms ease-in-out;
+    border-radius: 50px;
+    transition: all 400ms ease-in-out;
+    .menu__list {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      .menu__list-item {
+        font-size: var(--fontSize-xl);
+        font-weight: 700;
+        padding-bottom: 2rem;
+        .menu__list-link {
+          color: var(--black);
+          text-decoration: none;
+        }
+      }
+    }
     &.menu--toggle {
       top: 0;
       left: 0;
+      border-radius: 0px;
+      background-color: var(--transparent);
     }
   }
 

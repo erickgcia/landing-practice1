@@ -55,6 +55,20 @@ const createMenu = () => {
 if (smallMediaQueryViewport) {
   const menu = createMenu();
   toggleClasses(menuIcon, menu, "menu--toggle");
+  toggleClasses(menuIcon, menuIcon, "header__menu-icon--toggle")
+
+  const menuNavList = createNavList([
+    "Log In",
+    "Products",
+    "Key Features",
+    "Why Us",
+    "Applications",
+    "Careers",
+    "Pricing",
+  ]);
+  console.log(menuNavList);
+
+  menu.appendChild(menuNavList);
 }
 
 function toggleClasses(element, target, toggleClass) {
@@ -65,4 +79,24 @@ function toggleClasses(element, target, toggleClass) {
       target.classList.remove(toggleClass);
     }
   });
+}
+
+function createNavList(listItems) {
+  const list = document.createElement("ul");
+  list.classList.add("menu__list");
+
+  listItems.forEach((itemText) => {
+  const item = document.createElement("li");
+  item.classList.add("menu__list-item");
+
+  const link = document.createElement("a");
+  link.setAttribute("href", "#");
+  link.classList.add("menu__list-link");
+  link.textContent = itemText;
+
+  item.appendChild(link);
+  list.appendChild(item);
+  });
+
+  return list;
 }
