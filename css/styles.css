@@ -264,7 +264,7 @@ body {
     }
     .grid__aside-icon {
       padding-top: 0.5rem;
-      width: 45px;
+      width: min(45px, 17.5%);
     }
   }
 }
@@ -332,6 +332,11 @@ body {
       }
     }
   }
+  .info-bubble {
+    &.info-bubble--before:hover {
+      left: 0;
+    }
+  }
   .menu {
     position: absolute;
     top: -100%;
@@ -379,11 +384,6 @@ body {
     }
     &.btn-wrapper--header {
       display: none;
-    }
-  }
-  .info-bubble--before {
-    &:hover .info-bubble--before {
-      pointer-events: none;
     }
   }
 }
