@@ -52,7 +52,7 @@ const createMenu = () => {
   return menu;
 }
 
-if (smallMediaQueryViewport) {
+if (smallMediaQueryViewport.matches) {
   const menu = createMenu();
   toggleClasses(menuIcon, menu, "menu--toggle");
   toggleClasses(menuIcon, menuIcon, "header__menu-icon--toggle")
@@ -75,8 +75,10 @@ function toggleClasses(element, target, toggleClass) {
   element.addEventListener("click", () => {
     if (!target.classList.contains(toggleClass)) {
       target.classList.add(toggleClass);
+      target.setAttribute("src", "img/x-icon.svg");
     } else if (target.classList.contains(toggleClass)) {
       target.classList.remove(toggleClass);
+      target.setAttribute("src", "img/menu.svg");
     }
   });
 }
