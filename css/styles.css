@@ -5,7 +5,6 @@
   --purple: #e63cdd59;
   --darkBlue: #03387b;
   --blue: #3545f7;
-  --darkGreen: #0d6200;
   --green: #73f665;
   --gray: #606066;
   --lightGray: #d6d6d659;
@@ -216,6 +215,8 @@ body {
         color: var(--green);
       }
       &.grid__aside-txt--oversize {
+        color: var(--lightGray);
+        font-weight: 700;
         font-size: var(--fontSize-lg);
       }
       .grid__aside-txt--blue {
