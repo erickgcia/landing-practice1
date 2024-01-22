@@ -20,9 +20,10 @@ function cloneAndModifyInnerContent(container) {
 
   const clonedForm = clonedElement.children[1];
   const clonedLabels = Array.from(clonedForm.children);
-  clonedLabels.forEach((element) => {
-    const inputs = Array.from(element.children);
-    console.log(inputs.innerHTML);
+
+  clonedLabels.forEach((label, index) => {
+    const text = "Activity #" + (index + 1);
+    label.innerHTML = `<label><input class='grid__aside-input' type='radio'>${text}</label>`;
   });
 }
 
@@ -66,8 +67,6 @@ if (smallMediaQueryViewport.matches) {
     "Careers",
     "Pricing",
   ]);
-  console.log(menuNavList);
-
   menu.appendChild(menuNavList);
 }
 
