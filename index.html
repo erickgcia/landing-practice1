@@ -10,10 +10,10 @@
 </head>
 <body>
   <header class="header">
-    <a href="#" aria-label="Navagate to home page">
+    <a href="#" aria-label="Regresar a la página principal">
       <img class="header__logo" src="img/logo.svg" alt="Logo de la página web">
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Navegación principal del sitio web">
       <ul class="nav__list">
         <li class="nav__list-item">
           <a href="#" class="nav__list-link">Products</a>
@@ -36,10 +36,10 @@
       </ul>
     </nav>
     <div class="btn-wrapper btn-wrapper--header">
-      <button class="btn">Log In</button>
-      <button class="btn btn--black">Try for free</button>
+      <button class="btn" aria-label="Iniciar sesion">Log In</button>
+      <button class="btn btn--black" aria-label="Probar la version de pago gratis">Try for free</button>
     </div>
-    <img type="button" class="header__menu-icon" src="img/menu.svg" alt="Icono de tres barras horizontales" aria-label="Open and close the menu bar options">
+    <img type="button" class="header__menu-icon" src="img/menu.svg" alt="Icono de tres barras horizontales" aria-label="Abrir y cerrar el menu de navegación">
   </header>
   <main>
     <article class="grid">
@@ -94,7 +94,7 @@
             <h5 class="grid__aside-title grid__aside-title--border">Design</h5>
             <p class="grid__aside-txt grid__aside-txt--border">3 tasks</p>
           </div>
-          <form action="#">
+          <form action="#" aria-label="Formulario de actividades pendientes">
             <label class="grid__aside-label" for="designSystem"><input class="grid__aside-input" type="radio" name="designSystem" id="designSystem">Design System</label>
             <label class="grid__aside-label" for="platformStructure"><input class="grid__aside-input" type="radio" name="platformStructure" id="platformStructure">Platform Structure</label>
             <label class="grid__aside-label" for="designReview"><input class="grid__aside-input" type="radio" id="designReview">Design Review</label>
@@ -102,7 +102,7 @@
         </section>
       </aside>
     </article>
-    <section class="scroller" data-animation="true" aria-label="Service tags scroller">
+    <section class="scroller" data-animation="true" aria-label="Scroller de etiquetas de servicios">
       <ul class="scroller__list scroller__inner">
         <li class="scroller__list-item scroller__list-item--blue">Design System</li>
         <li class="scroller__list-item scroller__list-item--purple">Platform Structure</li>
