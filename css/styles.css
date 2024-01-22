@@ -3,7 +3,7 @@
   --white: #fefefe;
   --transparent: #ffffffe8;
   --purple: #e63cdd59;
-  --darkBlue: #03387b;
+  --orange: #f9b02b;
   --blue: #3545f7;
   --green: #73f665;
   --gray: #606066;
@@ -215,14 +215,14 @@ body {
         color: var(--green);
       }
       &.grid__aside-txt--oversize {
-        color: var(--lightGray);
+        color: var(--black);
         font-weight: 700;
-        font-size: var(--fontSize-lg);
+        font-size: var(--fontSize-xl);
       }
-      .grid__aside-txt--blue {
+      .grid__aside-txt--orange {
         font-weight: 700;
         font-size: var(--fontSize-md);
-        color: var(--darkBlue);
+        color: var(--orange);
       }
       .grid__aside-txt--ticking {
         animation: ticking 1.5s linear infinite;
@@ -261,6 +261,10 @@ body {
       &:checked {
         accent-color: var(--green);
       }
+    }
+    .grid__aside-icon {
+      padding-top: 0.5rem;
+      width: 45px;
     }
   }
 }

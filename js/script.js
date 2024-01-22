@@ -101,3 +101,31 @@ function createNavList(listItems) {
 
   return list;
 }
+
+const dateText = document.querySelector(".grid__aside-txt--date"); 
+
+function currentDateModifier(element) {
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.toLocaleDateString('en-US', { month: 'short' });
+  const modifiedDate = `${day} ${month}`;
+
+  element.textContent = modifiedDate;
+}
+
+currentDateModifier(dateText);
+
+const timeText = document.querySelector(".grid__aside-txt--time");
+
+function modifyTimeFormat(number) {
+  return number < 10 ? `0${number}` : number;
+}
+
+function currentTimeModifier(element) {
+  const currentTime = new Date();
+  const hours = currentTime.getHours();
+  const minutes = modifyTimeFormat(currentTime.getMinutes());
+  element.innerHTML = `${hours} <span class="grid__aside-txt--ticking">:</span> ${minutes}`;
+}
+
+currentTimeModifier(timeText);
