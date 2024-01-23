@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+  <title lang="es">Modulo 17 - Accesibilidad en Sitios Web</title>
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" aria-label="Regresar a la página principal">
+      <img class="header__logo" src="img/logo.svg" alt="Logo de la página web">
+    </a>
+    <nav class="nav" aria-label="Navegación principal del sitio web">
+      <ul class="nav__list">
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-link">Products</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-link">Key Features</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-link">Why Us</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-link">Applications</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="#" class="nav__list-link">Careers</a>
+        </li>
+        <li class="nav__list-item">
+          <a href="pricing.html" class="nav__list-link">Pricing</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="btn-wrapper btn-wrapper--header">
+      <button class="btn" aria-label="Iniciar sesion">Log In</button>
+      <button class="btn btn--black" aria-label="Probar la version de pago gratis">Try for free</button>
+    </div>
+    <img class="header__menu-icon" src="img/menu.svg" alt="Icono de tres barras horizontales" role="button" aria-roledescription="Abrir y cerrar el menu de navegación">
+  </header>
+  <main>
+    <article class="pricing">
+      <div class="pricing__box pricing__box--column">
+        <h1 class="pricing__box-title">Choose the plan that suits you the best</h1>
+        <h2 class="pricing__box-subtitle">Crafted with a thoughful focus on enterprises needs and preferences</h2>
+      </div>
+      <article class="pricing__plans">
+        <section class="pricing__plans-wrapper">
+          <div class="pricing__box">
+            <h3 class="pricing__box-title pricing__box-title--undersize pricing__box-title--white">Starter plan</h3>
+            <p class="pricing__box-subtitle">For early stage startups looking to combine data from few sources</p>
+            <p class="pricing__box-txt"><span class="pricing__box-txt pricing__box-txt--oversize">$20</span> per month</p>
+            <button class="pricing__box-btn">Get started</button>
+          </div>
+          <div class="pricing__box">
+            <ul class="list">
+              <li class="list__item">500 MAE (Monthly Active Employees)</li>
+              <li class="list__item">Email/Password authentication and OAuth</li>
+              <li class="list__item">Basic management support</li>
+              <li class="list__item">Marketing Analysis</li>
+              <li class="list__item">Update Userflow</li>
+            </ul>
+          </div>
+        </section>
+        <section class="pricing__plans-wrapper pricing__plans-wrapper--white">
+          <div class="pricing__box">
+            <h3 class="pricing__box-title pricing__box-title--undersize">Pro plan</h3>
+            <p class="pricing__box-subtitle">For medium size enterprises looking to combine data from a variety of sources</p>
+            <p class="pricing__box-txt"><span class="pricing__box-txt pricing__box-txt--oversize pricing__box-txt--black">$100</span> per month</p>
+            <button class="pricing__box-btn pricing__box-btn--black">Get started</button>
+          </div>
+          <div class="pricing__box wrapper--black">
+            <ul class="list">
+              <li class="list__item">2,000 MAE (Monthly Active Employees)</li>
+              <li class="list__item">Email/Password authentication and OAuth</li>
+              <li class="list__item">Focused management support</li>
+              <li class="list__item">Marketing Analysis</li>
+              <li class="list__item">Update Userflow</li>
+            </ul>
+          </div>
+        </section>
+        <section class="pricing__plans-wrapper">
+          <div class="pricing__box">
+            <h3 class="pricing__box-title pricing__box-title--undersize pricing__box-title--white">Elite plan</h3>
+            <p class="pricing__box-subtitle">For international enterprises looking to combine data from variety of sources</p>
+            <p class="pricing__box-txt"><span class="pricing__box-txt pricing__box-txt--oversize">$250</span> per month</p>
+            <button class="pricing__box-btn">Get started</button>
+          </div>
+          <div class="pricing__box wrapper--black">
+            <ul class="list">
+              <li class="list__item">10,000 MAE (Monthly Active Employees)</li>
+              <li class="list__item">Email/Password authentication and OAuth</li>
+              <li class="list__item">Highest priority management support</li>
+              <li class="list__item">Marketing Analysis</li>
+              <li class="list__item">Update Userflow</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </article>
+  </main>
+</body>
+</html>
