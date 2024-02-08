@@ -484,6 +484,10 @@ body {
       list-style: none;
     }
   }
+  .list__link {
+    text-decoration: none;
+    color: var(--black);
+  }
 }
 
 @media screen and (max-width: 60em) {
