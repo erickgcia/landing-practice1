@@ -1,4 +1,5 @@
 let currentPage = window.location.pathname.split("/").pop();
+console.log(currentPage);
 
 if (currentPage === "index.html") {
   const tasksContainer = document.querySelector(".info-bubble:has(form)");
